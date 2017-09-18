@@ -49,18 +49,18 @@
         </security:filter-chain-map>
     </bean>
 
-    <!--   Handler deciding where to redirect user after successful login -->
+    <!--   Handler deciding where to redirect user after successful login 
     <bean id="successRedirectHandler"
           class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
         <property name="defaultTargetUrl" value="/"/>
     </bean>
+    -->
     
-    
-   <!--   Use the following for interpreting RelayState coming from unsolicited response as redirect URL: 
+   <!--   Use the following for interpreting RelayState coming from unsolicited response as redirect URL: -->
     <bean id="successRedirectHandler" class="org.springframework.security.saml.SAMLRelayStateSuccessHandler">
        <property name="defaultTargetUrl" value="/" />
     </bean>
-    -->
+    
     
 
     <!-- Handler deciding where to redirect user after failed login -->
@@ -102,8 +102,8 @@
     </bean>
 
     <!-- Entry point to initialize authentication, default values taken from properties file -->
-     <!--  <bean id="samlEntryPoint" class="org.springframework.security.saml.SAMLEntryPoint"/> -->
-      
+       <bean id="samlEntryPoint" class="org.springframework.security.saml.SAMLEntryPoint"/> 
+      <!-- 
     <bean id="samlEntryPoint" class="main.java.gov.usda.fs.sso.saml.CustomeSamlEntryPoint">
         <property name="defaultProfileOptions">
             <bean class="org.springframework.security.saml.websso.WebSSOProfileOptions">
@@ -111,7 +111,7 @@
             </bean>
         </property>
     </bean>
-      
+       -->
     <!-- IDP Discovery Service -->
     <bean id="samlIDPDiscovery" class="org.springframework.security.saml.SAMLDiscovery">
         <property name="idpSelectionPath" value="/WEB-INF/security/idpSelection.jsp"/>

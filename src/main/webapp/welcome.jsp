@@ -38,8 +38,11 @@
 							</header>							
 							<ul class="actions">
 							   <li>
-							     <!--  <a href="tea.jsp?relayState=http://fsxrnsx0128.wrk.fs.usda.gov/tea" class="button">Access App</a></li>-->
-							     <a href="tea.jsp?relayState=http://fsxrnsx0128.wrk.fs.usda.gov/tea" class="button">Access App</a></li>
+							
+                          <!--    <a href="tea.jsp?relayState=app.jsp" class="button">Access App</a></li> -->   
+						      <a href="tea.jsp?relayState=http://fsxrnsx0128.wrk.fs.usda.gov/tea" class="button">Access App</a></li>   
+							     
+							    
 							
 							</ul>
 						</article>

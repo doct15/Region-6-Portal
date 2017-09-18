@@ -34,7 +34,8 @@
                     <div class="post">
                         <div class="post-title"><h2 class="label label-green">Authenticated user</h2></div>
                         <%
-                          out.println("JSON=" + session.getAttribute("JSON"));
+                                out.println("AUTH=" + request.getParameter("auth"));
+                       
                          %>
                         <p class="quiet large">Overview of the authenticated user's data.</p>
                         <div class="post-body">
