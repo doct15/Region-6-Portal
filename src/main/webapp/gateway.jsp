@@ -11,6 +11,8 @@
 
 
 
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 
@@ -28,9 +30,23 @@
      String url12 = request.getParameter("relayState");
      String acn = credential.getAttributeAsString("usdacn");
      String authid = credential.getAttributeAsString("usdaeauthid");
+     String sponsoremployeeid = credential.getAttributeAsString("usdasponsoremployeeid");
+     String email = credential.getAttributeAsString("usdaemail");
+     String lastname = credential.getAttributeAsString("usdalastname");
+     String firstname = credential.getAttributeAsString("usdafirstname");
+     String upn = credential.getAttributeAsString("usdaupn");
+     String securityofficersuspensionstatus = credential.getAttributeAsString("usdasecurityofficersuspensionstatus");
+     String assurancelevel = credential.getAttributeAsString("usdaassurancelevel");
      String assertion = XMLHelper.nodeToString(SAMLUtil.marshallMessage(credential.getAuthenticationAssertion()));
      String json = " { usdacn:" + acn + 
-                     "   , " + " usdaeauthid:" + authid +
+                     "   , " + " usdaeauthid:" + authid + 
+                    "   , " + " usdasponsoremployeeid:" + sponsoremployeeid +  
+                    "  , " + " usdaemail:" + email + 
+                    "  , " + " usdalastname:" + lastname + 
+                    "  , " + " usdafirstname:" + firstname + 
+                    "  , " + " usdaupn:" + upn + 
+                    "  , " + " usdasecurityofficersuspensionstatus:" + securityofficersuspensionstatus + 
+                    "  , " + " usdaassurancelevel:" + assurancelevel + 
                      "}";
      String basicAuth = Base64.getEncoder().encodeToString((json).getBytes(StandardCharsets.UTF_8));
      //url = "app.jsp";

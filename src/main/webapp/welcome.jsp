@@ -1,3 +1,5 @@
+<%@ page language="java" import="java.util.*" %> 
+<%@ page import = "java.util.ResourceBundle" %>
 <!DOCTYPE HTML>
 
 <html>
@@ -12,9 +14,11 @@
 		
 	</head>
 	<body>
-	<script>
-	
-</script>
+	 <% ResourceBundle resource = ResourceBundle.getBundle("system");
+  		String name=resource.getString("teaurl");
+  		name = "gateway.jsp?relayState=" + name;
+  		%>
+  
         <div style="display: none">      
         </div>
 
@@ -38,12 +42,12 @@
 							</header>							
 							<ul class="actions">
 							   <li>
-							
-                          <!--    <a href="tea.jsp?relayState=app.jsp" class="button">Access App</a></li> -->   
-						      <a href="tea.jsp?relayState=http://fsxrnsx0128.wrk.fs.usda.gov/tea" class="button">Access App</a></li>   
-							     
-							    
-							
+							  
+ 
+			 			<a href=<%=name %> class="button">Access App</a></li> 			
+                          <!--    <a href="tea.jsp?relayState=app.jsp" class="button">Access App</a></li>  
+						   <li>   <a href="tea.jsp?relayState=http://fsxrnsx0128.wrk.fs.usda.gov/tea" class="button">Access App</a></li>    --> 
+						
 							</ul>
 						</article>
 						

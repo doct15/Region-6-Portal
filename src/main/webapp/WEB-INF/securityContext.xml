@@ -8,6 +8,9 @@
 
     <!-- Enable auto-wiring -->
     <context:annotation-config/>
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="locations" value="classpath:/system.properties"/>
+	</bean>
 
     <!-- Scan for auto-wiring classes in spring saml packages -->
     <context:component-scan base-package="org.springframework.security.saml"/>
@@ -131,12 +134,13 @@
         </constructor-arg>
     </bean>
     -->
+   
 
     <bean id="metadataGeneratorFilter" class="org.springframework.security.saml.metadata.MetadataGeneratorFilter">
       <constructor-arg>
         <bean class="org.springframework.security.saml.metadata.MetadataGenerator">  
                  
-              <property name="entityId" value="fsxopsx1070.wrk.fs.usda.gov"/>
+              <property name="entityId" value="${entityId}"/>
             <property name="extendedMetadata">
                 <bean class="org.springframework.security.saml.metadata.ExtendedMetadata">
                     <property name="signMetadata" value="false"/>
