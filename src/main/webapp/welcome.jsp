@@ -24,9 +24,13 @@
 
 		<!-- Header -->
 			<header id="header" class="alt">
-                <div class="inner" style="    background-image: url(assets/img/grey_mountains2.png); height: 385px; width: 100%;">                    
+                
+                <div class="inner" style="    background-image: url(assets/img/grey_mountains2.png); height: 420px; width: 100%;">                    
                     <h1><img src="images/USDA_logo.png" alt="USDA Forest Service LOGO" style="width: 42px"> Region 6 Portal</h1>
-					<p style="padding-top: 150px">USDA Forest Service</p>
+					<a href="" class="button" style="box-shadow: inset 0 0 0 2px #fff;
+    color: #fff !important; margin-top: 100px">LOGOUT</a>
+                    <p style="margin-top:20px">USDA Forest Service</p>
+                    
 				</div>
                     
 			</header>
@@ -38,8 +42,8 @@
 				<!-- Items -->
 					<section class="main items">
 						<article class="item">
-							<header>
-								<h3>TEA</h3> 
+							<header style="background-image: url(assets/img/timber.jpg);">
+								<h3 style="width: 200px; background-color: inherit;">TEA</h3> 
 							</header>							
 							<ul class="actions">
 							   <li>
