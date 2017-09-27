@@ -1,3 +1,5 @@
+<%@ page language="java" import="java.util.*" %> 
+<%@ page import = "java.util.ResourceBundle" %>
 <!DOCTYPE HTML>
 
 <html>
@@ -12,9 +14,11 @@
 		
 	</head>
 	<body>
-	<script>
-	
-</script>
+	 <% ResourceBundle resource = ResourceBundle.getBundle("system");
+  		String name=resource.getString("teaurl");
+  		name = "gateway.jsp?relayState=" + name;
+  		%>
+  
         <div style="display: none">      
         </div>
 
@@ -26,6 +30,7 @@
 					<p>USDA Forest Service</p>
 				</div>
 			</header>
+		
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -38,12 +43,12 @@
 							</header>							
 							<ul class="actions">
 							   <li>
-							
-                          <!--    <a href="tea.jsp?relayState=app.jsp" class="button">Access App</a></li> -->   
-						      <a href="tea.jsp?relayState=http://fsxrnsx0128.wrk.fs.usda.gov/tea" class="button">Access App</a></li>   
-							     
-							    
-							
+							  
+ 
+			 			<a href=<%=name %> class="button">Access App</a></li> 			
+                          <!--    <a href="tea.jsp?relayState=app.jsp" class="button">Access App</a></li>  
+						   <li>   <a href="tea.jsp?relayState=http://fsxrnsx0128.wrk.fs.usda.gov/tea" class="button">Access App</a></li>    --> 
+						
 							</ul>
 						</article>
 						
@@ -55,12 +60,12 @@
 
 			</div>
 
-		<!-- Scripts -->
+		<!-- Scripts 
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+-->
 	</body>
 </html>
 

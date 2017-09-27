@@ -35,6 +35,11 @@
                         <div class="post-title"><h2 class="label label-green">Authenticated user</h2></div>
                         <%
                                 out.println("AUTH=" + request.getParameter("auth"));
+                                out.println("id=" + request.getParameter("authid"));
+                                out.println("email=" + request.getParameter("email"));
+                                out.println("lastname=" + request.getParameter("lastname"));
+                                out.println("firstname=" + request.getParameter("firstname"));
+                               
                        
                          %>
                         <p class="quiet large">Overview of the authenticated user's data.</p>
