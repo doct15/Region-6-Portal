@@ -94,14 +94,14 @@
 
     <!-- Central storage of cryptographic keys -->
       <bean id="keyManager" class="org.springframework.security.saml.key.JKSKeyManager">
-        <constructor-arg value="classpath:security/samlKeystore.jks"/>
-        <constructor-arg type="java.lang.String" value="nalle123"/>
+        <constructor-arg value="classpath:security/keystore.jks"/>
+        <constructor-arg type="java.lang.String" value="${aliaspwd}"/>
         <constructor-arg>
             <map>
-                <entry key="apollo" value="nalle123"/>
+                <entry key="${aliasname}" value="${aliaspwd}"/>
             </map>
         </constructor-arg>
-        <constructor-arg type="java.lang.String" value="apollo"/>
+        <constructor-arg type="java.lang.String" value="${aliasname}"/>
     </bean>
 
     <!-- Entry point to initialize authentication, default values taken from properties file -->
@@ -134,22 +134,22 @@
         </constructor-arg>
     </bean>
     -->
-   
+    
 
     <bean id="metadataGeneratorFilter" class="org.springframework.security.saml.metadata.MetadataGeneratorFilter">
       <constructor-arg>
-        <bean class="org.springframework.security.saml.metadata.MetadataGenerator">  
-                 
+        <bean class="org.springframework.security.saml.metadata.MetadataGenerator">                  
               <property name="entityId" value="${entityId}"/>
             <property name="extendedMetadata">
                 <bean class="org.springframework.security.saml.metadata.ExtendedMetadata">
                     <property name="signMetadata" value="false"/>
-                    <property name="idpDiscoveryEnabled" value="false"/><!-- was true -->
+                    <property name="idpDiscoveryEnabled" value="false"/>
                 </bean>
             </property>
         </bean>
      </constructor-arg>
     </bean>
+   
     <!-- The filter is waiting for connections on URL suffixed with filterSuffix and presents SP metadata there -->
     <bean id="metadataDisplayFilter" class="org.springframework.security.saml.metadata.MetadataDisplayFilter"/>
 

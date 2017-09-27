@@ -37,7 +37,7 @@
                                     stringWriter.close();
                                 %></pre></div>
                                 <br>
-                             <!--     <strong>Make sure to hide error content from your production environments to minimize leakage of useful data to potential
+                               <!--   <strong>Make sure to hide error content from your production environments to minimize leakage of useful data to potential
                                 attackers.</strong>-->
                             <% } %>
                         </div>

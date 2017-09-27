@@ -30,6 +30,7 @@
 					<p>USDA Forest Service</p>
 				</div>
 			</header>
+		
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -59,12 +60,12 @@
 
 			</div>
 
-		<!-- Scripts -->
+		<!-- Scripts 
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+-->
 	</body>
 </html>
 

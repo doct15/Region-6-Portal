@@ -10,9 +10,6 @@
 <%@ page import="java.nio.charset.*" %>
 
 
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 
@@ -48,7 +45,12 @@
                     "  , " + " usdasecurityofficersuspensionstatus:" + securityofficersuspensionstatus + 
                     "  , " + " usdaassurancelevel:" + assurancelevel + 
                      "}";
-     String basicAuth = Base64.getEncoder().encodeToString((json).getBytes(StandardCharsets.UTF_8));
+     String id =  authid ;
+     String  em =   email ; 
+     String lname =  lastname ;
+     String  fname = firstname;                 
+                    
+     String basicAuth1 = Base64.getEncoder().encodeToString((json).getBytes(StandardCharsets.UTF_8));
      //url = "app.jsp";
      //session.setAttribute("JSON", value1);     
      // response.addHeader("usdacn" , acn);
@@ -61,20 +63,25 @@
               //request.getRequestDispatcher(url).forward(request,response);
            // response.sendRedirect(url);
             
-            
+     //   out.println("Basic Auth" );  
+        
               
     %>
-    
+      
      <form name="submitform" action=<%=url %>  method="post" > 
-          <input type="hidden" name="auth" id="auth" value=<%=basicAuth %> />
+           <input type="hidden" name="auth" id="auth" value=<%=basicAuth1 %> />  
+           <input type="hidden" name="authid" id="authid" value=<%=id %> /> 
+           <input type="hidden" name="email" id="email" value=<%=em %> /> 
+           <input type="hidden" name="lastname" id="lastname" value=<%=lname %> /> 
+           <input type="hidden" name="firstname" id="firstname" value=<%=fname %> /> 
 
    </form>
+   
  <script language="JavaScript" type="text/javascript">
     document.submitform.submit();
   </script>
-  
    
-          
-		</body>
+            
+</body>
 </html>
 
