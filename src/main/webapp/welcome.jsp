@@ -24,11 +24,11 @@
 
 		<!-- Header -->
 			<header id="header" class="alt">
-                
-				<div class="inner">                    
+                <div class="inner" style="    background-image: url(assets/img/grey_mountains2.png); height: 385px; width: 100%;">                    
                     <h1><img src="images/USDA_logo.png" alt="USDA Forest Service LOGO" style="width: 42px"> Region 6 Portal</h1>
-					<p>USDA Forest Service</p>
+					<p style="padding-top: 150px">USDA Forest Service</p>
 				</div>
+                    
 			</header>
 		
 
