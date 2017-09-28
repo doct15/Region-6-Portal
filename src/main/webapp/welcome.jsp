@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <%@ page language="java" import="java.util.*" %> 
 <%@ page import = "java.util.ResourceBundle" %>
-<!DOCTYPE HTML>
+
 
 <html>
 	<head>
