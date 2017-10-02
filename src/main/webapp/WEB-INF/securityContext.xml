@@ -18,6 +18,7 @@
     <!-- Unsecured pages -->
     <security:http security="none" pattern="/favicon.ico"/>
     <security:http security="none" pattern="/images/**"/>
+    <security:http security="none" pattern="/assets/**"/>
     <security:http security="none" pattern="/css/**"/>
     <security:http security="none" pattern="/logout.jsp"/>
     <security:http security="none" pattern="/welcome.jsp"/>
@@ -94,7 +95,7 @@
 
     <!-- Central storage of cryptographic keys -->
       <bean id="keyManager" class="org.springframework.security.saml.key.JKSKeyManager">
-        <constructor-arg value="classpath:security/keystore.jks"/>
+        <constructor-arg value="classpath:keystore.jks"/>
         <constructor-arg type="java.lang.String" value="${aliaspwd}"/>
         <constructor-arg>
             <map>

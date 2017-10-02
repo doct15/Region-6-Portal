@@ -1374,8 +1374,7 @@
 
 			#header.alt h1 {
 				font-size: 4em;
-				padding: 0 0.5em 0.25em 0.5em;
-				border-bottom: solid 2px #ffffff;
+				padding-top: 15px;
 				font-weight: 200;
 				font-family: "Source Sans Pro", Helvetica, sans-serif;
 				text-transform: none;
