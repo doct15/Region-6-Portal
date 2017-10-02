@@ -5,10 +5,10 @@
 
         <head>
             <title>Region 6 Portal</title>
-            <meta charset="utf-8" />
+            <meta http-equiv="Content-Type" content="text/css;charset=utf-8" />
             <meta name="google" content="notranslate">
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="stylesheet" href="../webapp/assets/css/main.css" /> </head>
+            <link rel="stylesheet" href="assets/css/main.css" /> </head>
 
         <body>
             <% ResourceBundle resource = ResourceBundle.getBundle("system");
@@ -18,9 +18,10 @@
                 <div style="display: none"> </div>
                 <!-- Header -->
                 <header id="header" class="alt">
-                    <div class="inner" style="background-image: url(../webapp/assets/img/grey_mountains2.png); height: 420px; width: 100%;">
-                        <h1><img src="../webapp/images/USDA_logo.png" alt="USDA Forest Service LOGO" style="width: 42px"> Region 6 Portal</h1> <a href="" class="button" style="box-shadow: inset 0 0 0 2px #fff;
-    color: #fff !important; margin-top: 100px">LOGOUT</a>
+                    <div class="inner" style="background-image: url(assets/img/grey_mountains2.png); height: 420px; width: 100%;">
+                        <h1><img src="images/USDA_logo.png" alt="USDA Forest Service LOGO" style="width: 42px"> Region 6 Portal</h1> 
+                        <!--  <a href="" class="button" style="box-shadow: inset 0 0 0 2px #fff;
+    color: #fff !important; margin-top: 100px">LOGOUT</a>-->
                         <p style="margin-top:20px">USDA Forest Service</p>
                     </div>
                 </header>
@@ -29,12 +30,11 @@
                     <!-- Items -->
                     <section class="main items">
                         <article class="item">
-                            <header style="background-image: url(../webapp/assets/img/timber.jpg);">
+                            <header style="background-image: url(assets/img/timber.jpg);">
                                 <h3 style="width: 200px; background-color: inherit;">TEA</h3> </header>
                             <ul class="actions">
                                 <li><a href="<%=name %>" class="button">Access App</a></li>
-                                <!--    <a href="tea.jsp?relayState=app.jsp" class="button">Access App</a></li>  
-						   <li>   <a href="tea.jsp?relayState=http://fsxrnsx0128.wrk.fs.usda.gov/tea" class="button">Access App</a></li>    --></ul>
+                               </ul>
                         </article>
                     </section>
                 </div>
